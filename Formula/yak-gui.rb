@@ -8,32 +8,26 @@ class YakGui < Formula
 
 
   def install
-    # Install the .app bundle
-    # Check what files are available
-    system "ls", "-la", "."
+    # Install the .app bundle to Applications directory
+    (prefix/"Applications").mkpath
+    cp_r "yak-gui.app", "#{prefix}/Applications/"
     
-    # Install the .app bundle
-    prefix.install "yak-gui.app"
-
-    # Create symlink in Applications for easy access
-    system "ln", "-sf", "#{prefix}/yak-gui.app", "/Applications/yak-gui.app"
-
-    # Create CLI wrapper for command-line access
-    bin.write_exec_script "#{prefix}/yak-gui.app/Contents/MacOS/yak-gui"
+    # Create symlink for command-line access
+    bin.write_exec_script "#{prefix}/Applications/yak-gui.app/Contents/MacOS/yak-gui"
   end
 
   def caveats
     <<~EOS
       yak-gui has been installed to:
-        #{prefix}/yak-gui.app
+        #{prefix}/Applications/yak-gui.app
 
-      A symlink has been created in /Applications for easy access.
-      You can also run it from the command line with: yak-gui
+      You can run it from the command line with: yak-gui
+      Or open it directly: open "#{prefix}/Applications/yak-gui.app"
     EOS
   end
 
   test do
     # Test that the app bundle exists
-    assert_predicate prefix/"yak-gui.app", :exist?
+    assert_predicate prefix/"Applications/yak-gui.app", :exist?
   end
 end
