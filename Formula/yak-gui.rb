@@ -6,7 +6,6 @@ class YakGui < Formula
   url "https://github.com/santi1s/yak/releases/download/v#{version}/yak-gui-darwin-universal.tar.gz"
   sha256 "sha256:de81b61e3c3cf26eb685e4a9ad7ede94bb070cbb806269aaceec205902210e8f"
 
-  depends_on "santi1s/tools/yak"
 
   def install
     # Install the .app bundle
