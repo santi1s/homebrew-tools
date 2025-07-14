@@ -9,6 +9,10 @@ class YakGui < Formula
 
   def install
     # Install the .app bundle
+    # Check what files are available
+    system "ls", "-la", "."
+    
+    # Install the .app bundle
     prefix.install "yak-gui.app"
 
     # Create symlink in Applications for easy access
