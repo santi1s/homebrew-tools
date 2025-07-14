@@ -1,10 +1,10 @@
 class YakGui < Formula
   desc "Desktop GUI for yak CLI tool"
   homepage "https://github.com/santi1s/yak"
-  version "0.1.11-test"
+  version "1.0.0"
 
   url "https://github.com/santi1s/yak/releases/download/v#{version}/yak-gui-darwin-universal.tar.gz"
-  sha256 "sha256:de81b61e3c3cf26eb685e4a9ad7ede94bb070cbb806269aaceec205902210e8f"
+  sha256 "2e377f9fd46c3bcdf1f0195fdab9e0f5cec1f27743b5af5d453e584ad5c0917d"
 
 
   def install
