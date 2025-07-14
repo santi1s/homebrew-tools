@@ -3,13 +3,8 @@ class YakGui < Formula
   homepage "https://github.com/santi1s/yak"
   version "1.0.0"
 
-  if Hardware::CPU.arm?
-    url "https://github.com/santi1s/yak/releases/download/v#{version}/yak-gui-darwin-arm64.tar.gz"
-    sha256 "ARM64_SHA256_TO_BE_UPDATED"
-  else
-    url "https://github.com/santi1s/yak/releases/download/v#{version}/yak-gui-darwin-amd64.tar.gz" 
-    sha256 "AMD64_SHA256_TO_BE_UPDATED"
-  end
+  url "https://github.com/santi1s/yak/releases/download/v#{version}/yak-gui-darwin-universal.tar.gz"
+  sha256 "UNIVERSAL_SHA256_TO_BE_UPDATED"
 
   depends_on "santi1s/tools/yak"
 
