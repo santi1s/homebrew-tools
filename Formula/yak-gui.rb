@@ -7,6 +7,11 @@ class YakGui < Formula
   sha256 "2e377f9fd46c3bcdf1f0195fdab9e0f5cec1f27743b5af5d453e584ad5c0917d"
 
   def install
+    # Debug: show what files are available
+    system "pwd"
+    system "ls", "-la"
+    system "find", ".", "-name", "*.app"
+    
     prefix.install "yak-gui.app"
     bin.write_exec_script prefix/"yak-gui.app/Contents/MacOS/yak-gui"
   end
