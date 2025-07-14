@@ -1,7 +1,7 @@
 class Yak < Formula
   desc "CLI tool for ArgoCD, Rollouts, and Vault secrets management"
   homepage "https://github.com/santi1s/yak"
-  version "1.0.0"
+  version "0.1.11-test"
 
   if Hardware::CPU.arm?
     url "https://github.com/santi1s/yak/releases/download/v#{version}/yak-darwin-arm64.tar.gz"
